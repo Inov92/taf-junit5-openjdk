@@ -4,7 +4,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import pii.taf.poc.multilaunch.core.services.drivers.ChromeWebDriver;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -16,15 +16,13 @@ class SimpleSeleniumTest {
 
     @BeforeEach
     void init() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-        driver = new ChromeDriver();
+        driver = new ChromeWebDriver().getDriver();
     }
 
     @Test
     void simpleSeleniumTest() {
         driver.get(SITE_URL);
         assertEquals(SITE_URL, driver.getCurrentUrl());
-
     }
 
     @AfterEach

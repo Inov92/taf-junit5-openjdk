@@ -11,5 +11,14 @@
 
     <artifactId>acceptance-tests</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>pii.taf.poc.multilaunch</groupId>
+            <artifactId>core-services</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
 
 </project>
