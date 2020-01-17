@@ -1,0 +1,12 @@
+##
+# This is a template file of properties for parallel execution via JUnit5
+# Before running JUnit test runner, create new file junit-platform.properties according to this template
+##
+
+junit.jupiter.execution.parallel.enabled = true
+
+# running methods in classes concurrent|same_thread
+junit.jupiter.execution.parallel.mode.default = concurrent
+
+# running classes concurrent|same_thread
+junit.jupiter.execution.parallel.mode.classes.default = concurrent

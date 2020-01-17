@@ -8,6 +8,6 @@ class JUnit5SimpleTests {
 
     @Test
     void simpleTest() {
-        assertEquals("Message", "Message", "JUnit5 not working");
+        assertEquals("Check JUnit5", "Check JUnit5", "JUnit5 is not working");
     }
 }
