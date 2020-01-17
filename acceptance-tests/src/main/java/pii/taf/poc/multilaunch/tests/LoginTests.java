@@ -10,7 +10,7 @@ import pii.taf.poc.multilaunch.core.services.product.pages.LoginPanel;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class LoginTests {
+public class LoginTests {
 
     private static final String SITE_URL = "https://jdi-testing.github.io/jdi-light/index.html";
 
