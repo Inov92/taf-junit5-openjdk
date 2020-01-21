@@ -21,6 +21,27 @@
         <selenium.version>3.141.59</selenium.version>
     </properties>
 
+    <profiles>
+        <profile>
+            <id>smoke-tests</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <junit.tags>smoke</junit.tags>
+            </properties>
+        </profile>
+        <profile>
+            <id>acceptance-tests</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <junit.tags>acceptance</junit.tags>
+            </properties>
+        </profile>
+    </profiles>
+
 
 
     <dependencies>
@@ -72,7 +93,16 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <groups>${junit.tags}</groups>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
                 <version>2.22.2</version>
             </plugin>
         </plugins>

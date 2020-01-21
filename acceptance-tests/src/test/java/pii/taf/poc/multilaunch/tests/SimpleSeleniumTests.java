@@ -2,13 +2,15 @@ package pii.taf.poc.multilaunch.tests;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import pii.taf.poc.multilaunch.core.services.drivers.ChromeWebDriver;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SimpleSeleniumTest {
+@Tag("smoke")
+class SimpleSeleniumTests {
 
     private static final String SITE_URL = "https://jdi-testing.github.io/jdi-light/index.html";
 
