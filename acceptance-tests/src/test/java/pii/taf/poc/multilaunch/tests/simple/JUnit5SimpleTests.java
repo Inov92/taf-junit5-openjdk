@@ -1,4 +1,4 @@
-package pii.taf.poc.multilaunch.tests;
+package pii.taf.poc.multilaunch.tests.simple;
 
 import org.junit.jupiter.api.Test;
 

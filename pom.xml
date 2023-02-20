@@ -16,6 +16,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <compiler.plugin.version>3.10.1</compiler.plugin.version>
         <java.version>17</java.version>
         <junit.jupiter.version>5.9.2</junit.jupiter.version>
         <lombok.version>1.18.26</lombok.version>
@@ -51,11 +52,6 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.jupiter.version}</version>
         </dependency>
-        <dependency> <!-- Needed for running tests with test runner -->
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-runner</artifactId>
-            <version>1.5.2</version>
-        </dependency>
         <!--Selenium-->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -85,9 +81,11 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version>
+                <version>${compiler.plugin.version}</version>
                 <configuration>
+                    <encoding>UTF-8</encoding>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                 </configuration>
